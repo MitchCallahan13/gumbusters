@@ -5,7 +5,7 @@ header.header-design .nav {
 }
 
 header.header-design .nav .contact-button {
-  background-color: var(--color);
+  background-color: var(--sec);
   color: white;
 }
 
@@ -42,7 +42,7 @@ header.header-design .nav .contact-button {
 
 .header-words h1 {
 font-size: 1.5rem;
-color: var(--color);
+color: var(--sec);
 font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ margin-top: 20px;
 
   .container {
     width: 100%;
-    padding: 7% 10%;
+    padding: 40px 10% 80px;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,7 +86,8 @@ margin-top: 20px;
 
   .location-block {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    margin: 10px 0;
   }
 
   .location-block > i {
@@ -122,7 +123,7 @@ margin-top: 20px;
   button {
     padding: 15px;
     font-size: 1rem;
-    background-color: var(--color);
+    background-color: var(--sec);
     color: white;
     border: none;
     cursor: pointer;
@@ -130,6 +131,14 @@ margin-top: 20px;
 
   button:hover {
     background-color: #00448c;
+  }
+
+  .icon-sq a {
+    text-decoration: none;
+  }
+
+  .left-tile p {
+    line-height: 1.5;
   }
 
 

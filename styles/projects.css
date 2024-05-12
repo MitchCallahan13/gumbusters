@@ -11,7 +11,7 @@ header.header-design .nav {
   
   /* Header image styling */
   .header-design .header-image {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/pic3.jpg') center/cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/water.jpg') center/cover no-repeat;
     height: 100%; /* Cover the entire header */
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@ header.header-design .nav {
   
   .header-words h1 {
   font-size: 1.5rem;
-  color: var(--color);
+  color: var(--sec);
   font-weight: bold;
   }
   
@@ -81,12 +81,53 @@ header.header-design .nav {
   .tile-content > div {
     width: 34%;
     margin: 15px 0;
+    position: relative;
   }
 
-  .tile-content img {
+  .tile-content > div > a.intro-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 30px;
+  }
+
+  .tile-content > a {
+    position: relative;
     width: 33%; /* Adjust based on your design */
+    overflow: hidden; /* Add this line */
+  }
+
+  /* Style for the white box */
+  .tile-content > a:nth-of-type(odd)::before {
+    content: "Before";
+  }
+  
+  .tile-content > a:nth-of-type(even)::before {
+    content: "After";
+  }
+  
+  /* Style for the white box */
+  .tile-content > a::before {
+    color: white;
+    position: absolute;
+    left: 0;
+    background-color: var(--color);
+    padding: 5px 10px; /* Adjust padding as needed */
+    min-width:63px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .tile-content > a > img {
+    width: 100%; /* Adjust based on your design */
     height: 380px;
     object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transform to the transition */
+  }
+  
+  .tile-content img:hover {
+    filter: brightness(50%);
+    transform: scale(1.05); /* Adjust this value as needed */
   }
 
   .tile-content p {
@@ -102,11 +143,19 @@ header.header-design .nav {
       gap: 30px;
     }
 
+    .tile-content > div > a.intro-button {
+      display: block;
+      padding: 10px;
+      position: relative;
+      width: fit-content;
+      margin-top: 15px;
+    }
+
     .portfolio-tile:nth-child(2n) .tile-content {
       flex-direction: column-reverse;
     }
     
-    .tile-content img {
+    .tile-content > a {
       width: 100%; /* Images fill the entire width of the container */
     }
     

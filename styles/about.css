@@ -1,7 +1,7 @@
 
 /* Nav Override */
 header.header-design .nav {
-  background-color: rgba(0, 0, 0, 0.414);
+  background-color: rgba(0, 0, 0, 0.512);
 }
 
 /* Header styling */
@@ -11,7 +11,7 @@ header.header-design .nav {
 
 /* Header image styling */
 .header-design .header-image {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/pic3.jpg') center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/water.jpg') center/cover no-repeat;
   height: 100%; /* Cover the entire header */
   position: absolute;
   top: 0;
@@ -37,7 +37,7 @@ header.header-design .nav {
 
 .header-words h1 {
 font-size: 1.5rem;
-color: var(--color);
+color: var(--sec);
 font-weight: bold;
 }
 

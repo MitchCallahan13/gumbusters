@@ -1,6 +1,7 @@
 /* Variables */
 :root {
-  --color: #68b0f7;
+  --color: #1c97ff;
+  --sec: #61b8ff;
 }
 
 /* Add Roboto font */
@@ -13,7 +14,7 @@ body, h1, h2, h3, ul, li, p, input, textarea, button {
   font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
-.header-design h1, h2, h3, ul, li {
+.header-design :where(h1, h2, h3, ul, li) {
   text-transform: uppercase;
 }
 
@@ -36,6 +37,10 @@ a {
 
 /* Navigation styling */
 
+.nav :where(ul, li) {
+  text-transform: uppercase;
+}
+
 .nav {
   position: relative; /* Change to relative positioning */
   background-color: transparent;
@@ -43,22 +48,19 @@ a {
   transition: background-color 0.8s ease; 
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 5px 20px 0;
 }
 
 .sticky-nav {
-  background-color: rgba(0, 0, 0, 0.414); /* Semi-transparent black background */
+  background-color: rgb(3 0 16 / 61%); /* Semi-transparent black background */
   position: fixed;
   top: 0; /* Stick to the top */
   left: 0;
   right: 0;
 }
 
-.logo {
-  height: 40px;
-  width: 80px;
-  color: white;
-  font-size: xx-large;
+.logo img {
+  height: 100px;
 }
 
 .nav-items {
@@ -73,7 +75,7 @@ a {
 }
 
 .nav-items li {
-  margin-right: 20px;
+  margin: 0 50px;
 }
 
 .nav-items a {
@@ -83,19 +85,19 @@ a {
 }
 
 .nav a.active {
-  color: var(--color);
+  color: var(--sec);
 }
 
 
 .nav-items a:hover {
-  color: var(--color);
+  color: var(--sec);
 }
 
 
 .contact-button {
   padding: 10px 20px;
-  border: solid 2px var(--color);
-  color: var(--color);
+  border: solid 2px var(--sec);
+  color: var(--sec);
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
@@ -104,7 +106,7 @@ a {
 }
 
 .contact-button:hover {
-  background-color: var(--color);
+  background-color: var(--sec);
   color: white;
 }
 
@@ -122,7 +124,7 @@ a {
   .nav {
     display: inline-block;
     width: -webkit-fill-available;
-    padding-bottom: 35px;
+    padding: 20px;
   }
 
   .nav .icon {
@@ -140,7 +142,7 @@ a {
     display: block;
     text-align: center;
     width: 100%;
-    margin-top: 20px;
+    margin-left: -5% !important;
   }
 
   .nav.responsive .nav-items li {
@@ -150,13 +152,17 @@ a {
   }
 
   .nav.responsive .nav-items li:hover {
-    color: var(--color);
+    color: var(--sec);
   }
 
   .phone-links {
     position: absolute;
     right: 20px;
-    top: 40px;
+    top: 45px;
+  }
+
+  .nav .logo img {
+    height: 70px;
   }
 }
 
@@ -170,10 +176,18 @@ a {
 
 /* FOOTER */
 
-.footer {
-  background-color: var(--color);
+.designed-by {
+  background-color: rgb(0, 0, 125);
   color: white;
-  padding: 20px 0;
+  text-align: center;
+  padding: 17px;
+  margin-top: 5px;
+}
+
+.footer {
+  background-color: rgb(5, 0, 26);
+  color: white;
+  padding: 20px 0px 0px 0px;
 }
 
 .footer h3 {
@@ -189,9 +203,12 @@ a {
 
 .footer-logo {
   flex-basis: 20%;
-  background-color: black;
-  padding: 20px;
+  padding: 5px 0 20px 0;
   height: 100px;
+}
+
+.footer-logo > img {
+  height: -webkit-fill-available;
 }
 
 .footer-section {
@@ -217,6 +234,11 @@ a {
   font-size: 0.9rem; /* Adjusted font size */
   color: white;
   text-decoration: none;
+  text-transform: capitalize;
+}
+
+.footer-nav a:hover, .footer-services a:hover {
+  color: black;
 }
 
 .footer-contact li {
@@ -229,7 +251,7 @@ a {
   }
 
   footer.footer {
-    padding: 10px 0;
+    padding: 10px 0 0;
   }
 
   footer .footer-container {
@@ -249,6 +271,8 @@ a {
   .logo .fa-brands {
     line-height: normal;
   }
+
+
 }
 
 /* Miscellaneous */
@@ -259,5 +283,92 @@ a {
 
 .blue {
   color: var(--color);
+}
+
+.intro-button {
+  display: inline-block;
+  color: var(--color);
+  border: 2px solid var(--color);
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.intro-button:hover {
+  background-color: var(--color);
+  color: white;
+}
+
+
+.intro-button.light {
+  color: var(--sec);
+  border: 2px solid var(--sec);
+}
+
+.intro-button.light:hover {
+  background-color: var(--sec);
+  color: white;
+}
+
+/* slideshow */
+
+.sec-text-container {
+  height: 500px;
+  margin: 0;
+  position: relative;
+}
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5));
+  pointer-events: none; /* add this to allow clicks to pass through the pseudo-element */
+}
+
+.slide {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: transform 0.7s ease; /* add a transition */
+}
+
+.slide img {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-word {
+  position: absolute;
+  top: 50%; /* adjust as needed */
+  left: 50%; /* adjust as needed */
+  transform: translate(-50%, -50%); /* center the elements */
+  z-index: 1; /* make sure the elements are on top */
+  text-align: center;
+}
+
+
+@media screen and (max-width: 780px) {
+  .header-image {
+    background-attachment: unset !important;
+  }
+
+  .image-filler {
+    background-attachment: unset !important;
+  }
 }
 
