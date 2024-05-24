@@ -1,52 +1,10 @@
-/* Header styling */
-.header-design {
-  height: 700px;
-}
-
-/* Header image styling */
-.header-design .header-image {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/water.jpg') center/cover no-repeat;
-  height: 100%; /* Cover the entire header */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Intro words styling */
-
-.header-words {
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-    text-align: center;
-    color: white;
-  }
-  
-.header-words h1 {
-  font-size: 1.5rem;
-  color: var(--sec);
-  font-weight: bold;
-}
-
-.header-words h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
 /* White Intro text div */
 
 .intro-container {
   padding: 80px 70px;
   text-align: center;
-  background: rgb(5, 0, 26);
+  background: var(--x-dark);
+  box-shadow: 0 0 40px #000000;
 }
   
 h1.intro-header {
@@ -117,7 +75,7 @@ p.intro-paragraph {
   }
   
   .sec-img h1:last-child {
-    color: var(--sec); /* Set the color of the second h1 */
+    color: var(--color); /* Set the color of the second h1 */
   }
 
 /* Services Container  */
@@ -125,7 +83,8 @@ p.intro-paragraph {
 .services-container {
   text-align: center;
   padding: 80px 70px;
-  background-color: rgb(251 251 252);
+  background-color: #eefbff;
+  box-shadow: 0 0 40px #000000;
 }
 
 .services-container h1.intro-header {

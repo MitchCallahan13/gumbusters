@@ -1,7 +1,8 @@
 /* Variables */
 :root {
-  --color: #1c97ff;
-  --sec: #61b8ff;
+  --color: #1EACDC;
+  --dark: #126986;
+  --x-dark: #063d4e;
 }
 
 /* Add Roboto font */
@@ -51,6 +52,8 @@ a {
   padding: 5px 20px 0;
 }
 
+/* Nav When scrolling */
+
 .sticky-nav {
   background-color: rgb(3 0 16 / 61%); /* Semi-transparent black background */
   position: fixed;
@@ -60,7 +63,8 @@ a {
 }
 
 .logo img {
-  height: 100px;
+  height: 90px;
+  margin: 5px 20px;
 }
 
 .nav-items {
@@ -85,19 +89,19 @@ a {
 }
 
 .nav a.active {
-  color: var(--sec);
+  color: var(--color);
 }
 
 
 .nav-items a:hover {
-  color: var(--sec);
+  color: var(--color);
 }
 
 
 .contact-button {
   padding: 10px 20px;
-  border: solid 2px var(--sec);
-  color: var(--sec);
+  border: solid 2px var(--color);
+  color: var(--color);
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
@@ -106,7 +110,7 @@ a {
 }
 
 .contact-button:hover {
-  background-color: var(--sec);
+  background-color: var(--color);
   color: white;
 }
 
@@ -152,7 +156,7 @@ a {
   }
 
   .nav.responsive .nav-items li:hover {
-    color: var(--sec);
+    color: var(--color);
   }
 
   .phone-links {
@@ -174,10 +178,55 @@ a {
   background-color: var(--color);
 }
 
+/* header image */
+
+/* Header styling */
+.header-design {
+  height: 700px;
+}
+
+/* Header image styling */
+.header-design .header-image {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/iStock-1409748184.jpg') center/cover no-repeat;
+  height: 100%; /* Cover the entire header */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Intro words styling */
+
+.header-words {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center;
+    color: white;
+  }
+  
+.header-words h1 {
+  font-size: 1.5rem;
+  color: var(--color);
+  font-weight: bold;
+}
+
+.header-words h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 /* FOOTER */
 
 .designed-by {
-  background-color: rgb(0, 0, 125);
+  background-color: var(--color);
   color: white;
   text-align: center;
   padding: 17px;
@@ -185,7 +234,7 @@ a {
 }
 
 .footer {
-  background-color: rgb(5, 0, 26);
+  background-color: var(--x-dark);
   color: white;
   padding: 20px 0px 0px 0px;
 }
@@ -296,20 +345,13 @@ a {
   text-decoration: none;
 }
 
-.intro-button:hover {
+.intro-button:hover, .full-color.intro-button {
   background-color: var(--color);
   color: white;
 }
 
-
-.intro-button.light {
-  color: var(--sec);
-  border: 2px solid var(--sec);
-}
-
-.intro-button.light:hover {
-  background-color: var(--sec);
-  color: white;
+.full-color.intro-button:hover {
+  background-color: var(--dark);
 }
 
 /* slideshow */
