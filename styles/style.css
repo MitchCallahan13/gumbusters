@@ -135,7 +135,7 @@ a {
   .nav .icon {
     float: right;
     display: block;
-    margin-left: 30px;
+    margin: 0 5px;
     font-size:15px;
   }
 
@@ -163,7 +163,7 @@ a {
   .phone-links {
     position: absolute;
     right: 20px;
-    top: 45px;
+    top: 55px;
   }
 
   .nav .logo img {

@@ -126,7 +126,7 @@ p.intro-paragraph {
  @media (max-width: 768px) {
 
   .image-filler {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/regworth/IMG_7649.jpeg') center/cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.5)), url('../images/iStock-1409748184.jpg') center/cover no-repeat;
   }
 
   .phone-service {
@@ -139,7 +139,7 @@ p.intro-paragraph {
   }
 
   .sec-img {
-    transform: translate(0%, -150%);
+    transform: translate(0%, -160%);
     padding: 10px;
 }
 }
