@@ -3,8 +3,8 @@
 .intro-container {
   padding: 80px 70px;
   text-align: center;
-  background: var(--x-dark);
-  box-shadow: 0 0 40px #000000;
+  background: #181818;
+  box-shadow: 0 0 30px #000000;
 }
   
 h1.intro-header {
